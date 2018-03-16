@@ -1,0 +1,2 @@
+&mt mtid=6
+HCEPT=-12800, BCEPT=12800, aeasy=90& ! From HKCM data
