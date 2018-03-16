@@ -65,19 +65,12 @@ npart = 1000
 
 def gamma(energy):
     return energy * ee * 1e6 / (mo * (c * c))
-
-
 def beta(energy):
     return 1 / gamma(energy) * m.sqrt(abs(gamma(energy) * gamma(energy) - 1))
-
-
 def vel(energy):
     return beta(energy) * c
-
-
 def momentum(energy):
     return gamma(energy) * mo * beta(energy) * c
-
 
 ###################################################################
 #                MAGNETIC FIELD AND FIELD INTEGRALS               #

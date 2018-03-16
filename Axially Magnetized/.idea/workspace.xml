@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ed394e4-cb14-4665-8dd2-f5c7e3c3db9c" name="Default" comment="" />
+    <list default="true" id="6ed394e4-cb14-4665-8dd2-f5c7e3c3db9c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GPT_INTERFACE.py" afterPath="$PROJECT_DIR$/GPT_INTERFACE.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,46 +19,30 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AnalyticModel.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AnalyticModel.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-              <folding>
-                <element signature="e#1805#1836#0" expanded="false" />
-                <element signature="e#1859#1926#0" expanded="false" />
-                <element signature="e#1948#1969#0" expanded="false" />
-                <element signature="e#1996#2034#0" expanded="false" />
-                <element signature="e#2798#3042#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GPT_INTERFACE.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GPT_INTERFACE.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GPT_INTERFACE.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="198" column="0" lean-forward="false" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+            <state relative-caret-position="1428">
+              <caret line="88" column="31" lean-forward="false" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="31" />
               <folding>
                 <element signature="e#409#445#0" expanded="true" />
                 <element signature="e#2117#2158#0" expanded="false" />
-                <element signature="e#2183#2256#0" expanded="false" />
-                <element signature="e#2280#2303#0" expanded="false" />
-                <element signature="e#2332#2376#0" expanded="false" />
-                <element signature="e#3419#3481#0" expanded="false" />
+                <element signature="e#2181#2254#0" expanded="false" />
+                <element signature="e#2276#2299#0" expanded="false" />
+                <element signature="e#2326#2370#0" expanded="false" />
+                <element signature="e#3412#3474#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="generate_OUTSF7.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/generate_OUTSF7.py">
+      <file leaf-file-name="GPT_READ_STD.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/GPT_READ_STD.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1156">
-              <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="70" selection-end-column="53" />
+            <state relative-caret-position="213">
+              <caret line="29" column="32" lean-forward="true" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#409#445#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -69,6 +57,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="AUTO_COMMIT_ON_CHERRY_PICK" value="true" />
+    <option name="FORCE_PUSH_ALLOWED" value="true" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -78,20 +73,22 @@
         <option value="$PROJECT_DIR$/intro_text.txt" />
         <option value="$PROJECT_DIR$/subprocess_call.py" />
         <option value="$PROJECT_DIR$/generate_automesh_file.py" />
-        <option value="$PROJECT_DIR$/psf_import.py" />
         <option value="$PROJECT_DIR$/Plot_FieldMap.py" />
         <option value="$PROJECT_DIR$/generate_OUTSF7.py" />
         <option value="$PROJECT_DIR$/hkcm_database.py" />
         <option value="$PROJECT_DIR$/AnalyticModel.py" />
         <option value="$PROJECT_DIR$/GPT_INTERFACE.py" />
+        <option value="$PROJECT_DIR$/psf_import.py" />
+        <option value="$PROJECT_DIR$/GPT_READ_STD.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="width" value="1108" />
+    <option name="width" value="877" />
     <option name="height" value="1057" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -112,11 +109,11 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PermanentMagneticSolenoids" />
+              <option name="myItemId" value="Axially Magnetized" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PermanentMagneticSolenoids" />
+              <option name="myItemId" value="Axially Magnetized" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -124,6 +121,9 @@
       </pane>
       <pane id="Scope" />
     </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -165,23 +165,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="subprocess_call" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PermanentMagneticSolenoids" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/subprocess_call.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="Plot_FieldMap" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -212,6 +195,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PermanentMagneticSolenoids" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GPT_INTERFACE.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="GPT_READ_STD" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PermanentMagneticSolenoids" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GPT_READ_STD.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -353,17 +353,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.AnalyticModel" />
       <item index="1" class="java.lang.String" itemvalue="Python.generate_automesh_file" />
-      <item index="2" class="java.lang.String" itemvalue="Python.subprocess_call" />
-      <item index="3" class="java.lang.String" itemvalue="Python.Plot_FieldMap" />
-      <item index="4" class="java.lang.String" itemvalue="Python.GPT_INTERFACE" />
+      <item index="2" class="java.lang.String" itemvalue="Python.Plot_FieldMap" />
+      <item index="3" class="java.lang.String" itemvalue="Python.GPT_INTERFACE" />
+      <item index="4" class="java.lang.String" itemvalue="Python.GPT_READ_STD" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.GPT_INTERFACE" />
-        <item index="1" class="java.lang.String" itemvalue="Python.AnalyticModel" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Plot_FieldMap" />
-        <item index="3" class="java.lang.String" itemvalue="Python.generate_automesh_file" />
-        <item index="4" class="java.lang.String" itemvalue="Python.subprocess_call" />
+        <item index="1" class="java.lang.String" itemvalue="Python.GPT_READ_STD" />
+        <item index="2" class="java.lang.String" itemvalue="Python.AnalyticModel" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Plot_FieldMap" />
+        <item index="4" class="java.lang.String" itemvalue="Python.generate_automesh_file" />
       </list>
     </recent_temporary>
   </component>
@@ -384,26 +384,26 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1108" height="1057" extended-state="0" />
-    <editor active="false" />
+    <frame x="-7" y="0" width="877" height="1057" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11080586" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14053427" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33262935" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2407603" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33262935" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2407603" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -442,10 +442,10 @@
           <folding>
             <element signature="e#409#445#0" expanded="true" />
             <element signature="e#2117#2158#0" expanded="false" />
-            <element signature="e#2183#2256#0" expanded="false" />
-            <element signature="e#2280#2303#0" expanded="false" />
-            <element signature="e#2332#2376#0" expanded="false" />
-            <element signature="e#3419#3481#0" expanded="false" />
+            <element signature="e#2181#2254#0" expanded="false" />
+            <element signature="e#2276#2299#0" expanded="false" />
+            <element signature="e#2326#2370#0" expanded="false" />
+            <element signature="e#3412#3474#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -455,7 +455,7 @@
         <state relative-caret-position="1156">
           <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="70" selection-end-column="53" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -498,13 +498,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/psf_import.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Plot_FieldMap.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -526,6 +519,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/generate_OUTSF7.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="681">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="70" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#9#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AnalyticModel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -540,27 +543,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generate_OUTSF7.py">
+    <entry file="file://$PROJECT_DIR$/psf_import.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="70" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="102">
+          <caret line="6" column="13" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GPT_INTERFACE.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="198" column="0" lean-forward="false" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+        <state relative-caret-position="1428">
+          <caret line="88" column="31" lean-forward="false" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="31" />
           <folding>
             <element signature="e#409#445#0" expanded="true" />
             <element signature="e#2117#2158#0" expanded="false" />
-            <element signature="e#2183#2256#0" expanded="false" />
-            <element signature="e#2280#2303#0" expanded="false" />
-            <element signature="e#2332#2376#0" expanded="false" />
-            <element signature="e#3419#3481#0" expanded="false" />
+            <element signature="e#2181#2254#0" expanded="false" />
+            <element signature="e#2276#2299#0" expanded="false" />
+            <element signature="e#2326#2370#0" expanded="false" />
+            <element signature="e#3412#3474#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GPT_READ_STD.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="29" column="32" lean-forward="true" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+          <folding>
+            <element signature="e#409#445#0" expanded="true" />
           </folding>
         </state>
       </provider>
