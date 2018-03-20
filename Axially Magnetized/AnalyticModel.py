@@ -18,20 +18,20 @@ from generate_OUTSF7 import FullOUTSF
 ###################################################################
 
 psf_map = 1
-map_exists = 1
+map_exists = 0
 plot_field = 0
 
 ###################################################################
 #                MAGNET PARAMS FOR FIELD MAP GENERATION           #
 ###################################################################
 
-partNum = "\9963-56988"
+partNum = "\9963-65252"
 
 # outer diameter in m
-D = 148.0e-3
+D = 20e-3
 # inner diameter in m
-d = 98.0e-3
-# height diameter in m
+d = 8e-3
+# height in m
 h = 30.0e-3
 # Remanent field in Tesla
 BR = 1.17
@@ -86,7 +86,7 @@ if psf_map == 0:
     BzNum = [Bz(x, L, Ri, Ro) for x in z]
 
 else:
-    if map_exists ==0 :
+    if map_exists == 0 :
         FullOUTSF(D, d, h, BR, partNum)
         [z, BzNum] = psf.BImport(partNum)
         BzNumSq = np.multiply(BzNum, BzNum)

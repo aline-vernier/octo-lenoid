@@ -3,6 +3,8 @@
 #                        ALL UNITS ARE SI                         #
 #     Poisson superfish maps must exist for this script to run    #
 #     SCAN OVER ENERGY AND DISTANCE OF SOLENOID TO SOURCE         #
+#     NOT YET DEBUGGED FOR SINGLE RUN                             #
+#                                                                 #
 ###################################################################
 
 from matplotlib import pyplot as plt
@@ -22,8 +24,11 @@ import subprocess
 ###################################################################
 show_plot = 0
 # Root location of GPT simulations
-GPT_ROOT = "G:\GPT\Salle Noire"
-SOL_TYPE = "\Axially Magnetized Solenoid"
+GPT_ROOT = "G:\GPT\Salle_Noire"
+SOL_TYPE = "\Axially_Magnetized_Solenoid"
+
+PSF_ROOT = "G:\Programmes\LANL\Solenoids"
+
 
 # Number of steps for source-solenoid distance
 num_l_map = 10
@@ -32,13 +37,27 @@ num_l_map = 10
 multi_run = 1
 energy_scan = 0
 l_map_scan = 1
+l_map_steps = 1
+l_map_max = 0
+l_map_min = 0
+
+# Screen or snapshot
+snapshot = 1
+time_steps = 100
+if snapshot == 1:
+    screen_or_snapshot = "snapshot(0,Tdet,Tstep) ;\n"
+else:
+    screen_or_snapshot = "screen(\"wcs\",\"I\",Ldet);\n"
+
+# Data grouping if multirun
+group_by_time = 1
 
 ###################################################################
 #                MAGNET PARAMS FOR FIELD MAP GENERATION           #
 ###################################################################
 
 magnet_file = "G:\Programmes\LANL\Solenoids\hkcm_magnets.xlsx"
-partNum = "9963-56987"
+partNum = "9963-65252"
 df = pandas.read_excel(magnet_file, index_col=0)
 h = df.loc[partNum, 'h']
 
@@ -162,7 +181,8 @@ text = \
     + "sigGbetar=sigdiv*Gbetaz;\n\n" \
     + "sigr = " + str(sigr) + "; \n" \
     + "len = " + str(length) + "; \n\n" \
-    + "# Start initial beam \n npart = " + str(npart) + ";\n\n" \
+    + "# Start initial beam \n " \
+    + "npart = " + str(npart) + ";\n\n" \
     + "setparticles(\"beam\",npart,me,qe,0.0) ;\n\n" \
     + "# transverse \n" \
     + "setrxydist(\"beam\",\"g\",0,sigr,0,3) ;\n" \
@@ -177,14 +197,13 @@ text = \
     + "# Liris = Scanned over \n" \
     + "Ldet = 0.3;\n" \
     + "Rpinhole = 1000e-6;	# diameter of entrance pinhole \n\n" \
-    + "rmax(\"wcs\",\"z\"," + Lmap + ",Rpinhole,0.5e-3);		# thickness of lead sheet\n " \
-    + "map2D_B(\"wcs\",\"z\"," + Lmap + ",\"fieldmap.gdf\",\"R\",\"Z\",\"Br\",\"Bz\",1.0);\n\n" \
+    + "rmax(\"wcs\",\"z\"," + Lmap + ",Rpinhole,0.5e-3);		# thickness of lead sheet\n" \
+    + "map2D_B(\"wcs\",\"z\"," + Lmap + ",\"" + w_dir + "\\fieldmap.gdf\",\"R\",\"Z\",\"Br\",\"Bz\",1.0);\n\n" \
     + "# Specify output times \n" \
     + "dtmax=1e-3/vz;\n" \
     + "Tdet=Ldet/vz;\n" \
-    + "Tstep=Tdet/100;\n" \
-    + "#screen(\"wcs\",\"I\",Ldet);\n" \
-    + "snapshot(0,Tdet,Tstep) ;\n\n"
+    + "Tstep=Tdet/" + str(time_steps) +";\n" \
+    + screen_or_snapshot
 
 GPT_input_file = w_dir + "\\SalleNoire_beam.in"
 with open(GPT_input_file, 'w') as out:
@@ -216,51 +235,65 @@ if multi_run == 1:
     if energy_scan == 0 and l_map_scan == 1:
         text = Lmap_text
         gdfa_cmd = " Lmap"
-
+    if group_by_time == 1:
+        gdfa_cmd = " time"
     GPT_mr_file = w_dir + "\\SalleNoire_beam.mr"
     with open(GPT_mr_file, 'w') as out:
         out.write(text)
 
     ###################################################################
-    #               GENERATE BATCH FILE                               #
+    #               GENERATE BATCH FILE for MULTIRUN                  #
     ###################################################################
 
-    text = "fish2gdf -o fieldmap.gdf " + "\"" + w_dir + "\OUTSF7.TXT\"\n"\
-           + "gdf2a -o fieldmap.txt fieldmap.gdf\n"\
-           + "mr -v -o results_SalleNoire_beam.gdf SalleNoire_beam.mr gpt SalleNoire_beam.in\n"\
-           + "gdfa -o std_SalleNoire_beam.gdf results_SalleNoire_beam.gdf " + gdfa_cmd +" stdx stdy stdz avgz\n" \
-           + "gdf2a -o std_SalleNoire_beam.txt std_SalleNoire_beam.gdf\n"\
-
-
-    GPT_bat_file = w_dir + "\\SalleNoire_beam.bat"
-    with open(GPT_bat_file, 'w') as out:
-        out.write(text)
-
-    ###################################################################
-    #               RUN BATCH FILE IF MULTIPLE RUN                    #
-    ###################################################################
-
-    subprocess.call(['G:\Programmes\GPT\GPTwin\GPTwin.exe', GPT_bat_file])
-
+    bat_text = "fish2gdf -o \"{0}\\fieldmap.gdf\" \"{1}\\OUTSF7.TXT\"\ngdf2a -o \"{0}\\fieldmap.txt\"" \
+               " \"{0}\\fieldmap.gdf\"\n" \
+               "mr -v -o \"{0}\\results_SalleNoire_beam.gdf\" \"{0}\\SalleNoire_beam.mr\" " \
+               "gpt \"{0}\\SalleNoire_beam.in\"\n" \
+               "gdfa -o \"{0}\\std_SalleNoire_beam.gdf\" " \
+               "\"{0}\\results_SalleNoire_beam.gdf\" {2} stdx stdy stdz avgz\n" \
+               "gdf2a -o \"{0}\\std_SalleNoire_beam.txt\" " \
+               "\"{0}\\std_SalleNoire_beam.gdf\"\n".format(w_dir, PSF_ROOT + "\\" + partNum, gdfa_cmd)
 else:
 
     ###################################################################
-    #               GENERATE BATCH FILE                               #
+    #               GENERATE BATCH FILE FOR SIMPLE RUN                #
     ###################################################################
 
-    text = "fish2gdf -o fieldmap.gdf " + w_dir + "\OUTSF7.TXT\n" \
-           + "gdf2a -o fieldmap.txt fieldmap.gdf\n" \
-           + "gpt -v -o results_SalleNoire_beam.gdf SalleNoire_beam.in\n"
+    gdfa_cmd = ""
 
-    GPT_bat_file = w_dir + "\\SalleNoire_beam.bat"
-    with open(GPT_bat_file, 'w') as out:
-        out.write(text)
+    bat_text = "fish2gdf -o \"{0}\\fieldmap.gdf\" \"{1}\\OUTSF7.TXT\"\ngdf2a -o \"{0}\\fieldmap.txt\"" \
+               " \"{0}\\fieldmap.gdf\"\n" \
+               "gpt -v -o \"{0}\\results_SalleNoire_beam.gdf\" \"{0}\\SalleNoire_beam.in\"\n" \
+               "gdfa -o \"{0}\\std_SalleNoire_beam.gdf\" " \
+               "\"{0}\\results_SalleNoire_beam.gdf\" {2} stdx stdy stdz avgz\n"\
+        .format(w_dir, PSF_ROOT + "\\" + partNum, gdfa_cmd)
 
-    ###################################################################
-    #               RUN BATCH FILE                                    #
-    ###################################################################
+###################################################################
+#               DEFINE AND PREPEND HEADER                         #
+###################################################################
 
-    subprocess.call(['G:\Programmes\GPT\GPTwin\GPTwin.exe', GPT_bat_file])
-    ###################################################################
-    #               END OF SCRIPT                                     #
-    ###################################################################
+n_lmap = m.modf((l_map_max - l_map_min)/l_map_steps)[1] + 1
+header = 'multirun {0} \nScanned_Over_Energy {1} \nEScan_Steps  {2} \nScanned_Over_Lmap {3} \nn_L_map {4}\n'.\
+    format(str(multi_run), str(energy_scan), str(num_e_steps), str(l_map_scan), str(n_lmap)) \
+    + 'group_by {0} \n'.format(str(gdfa_cmd)) \
+    + 'time_steps {0} \n\n'.format(str(time_steps))
+
+GPT_head_file = w_dir + "\\std_SalleNoire_beam_h.txt"
+with open(GPT_head_file, 'w') as out:
+    out.write(header)
+
+bat_text += 'type std_SalleNoire_beam.txt >> std_SalleNoire_beam_h.txt \n'
+
+GPT_bat_file = w_dir + "\\SalleNoire_beam.bat"
+with open(GPT_bat_file, 'w') as out:
+    out.write(bat_text)
+
+###################################################################
+#               RUN                                               #
+###################################################################
+
+subprocess.call(['G:\Programmes\GPT\GPTwin\GPTwin.exe', GPT_bat_file])
+
+###################################################################
+#               END OF SCRIPT                                     #
+###################################################################
