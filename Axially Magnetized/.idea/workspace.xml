@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ed394e4-cb14-4665-8dd2-f5c7e3c3db9c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pristinifier.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnalyticModel.py" afterPath="$PROJECT_DIR$/AnalyticModel.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GPT_INTERFACE.py" afterPath="$PROJECT_DIR$/GPT_INTERFACE.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GPT_READ_STD.py" afterPath="$PROJECT_DIR$/GPT_READ_STD.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generate_OUTSF7.py" afterPath="$PROJECT_DIR$/generate_OUTSF7.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/psf_import.py" afterPath="$PROJECT_DIR$/psf_import.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,30 +23,43 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GPT_INTERFACE.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GPT_INTERFACE.py">
+      <file leaf-file-name="AnalyticModel.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AnalyticModel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="276" column="15" lean-forward="true" selection-start-line="276" selection-start-column="15" selection-end-line="276" selection-end-column="15" />
+            <state relative-caret-position="34">
+              <caret line="2" column="67" lean-forward="true" selection-start-line="2" selection-start-column="67" selection-end-line="2" selection-end-column="67" />
               <folding>
-                <element signature="e#2575#2616#0" expanded="false" />
-                <element signature="e#2639#2712#0" expanded="false" />
-                <element signature="e#2734#2757#0" expanded="false" />
-                <element signature="e#2784#2828#0" expanded="false" />
-                <element signature="e#3870#3932#0" expanded="false" />
+                <element signature="e#2299#2330#0" expanded="false" />
+                <element signature="e#2353#2420#0" expanded="false" />
+                <element signature="e#2442#2463#0" expanded="false" />
+                <element signature="e#2490#2528#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GPT_READ_STD.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GPT_INTERFACE.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/GPT_INTERFACE.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-170">
+              <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+              <folding>
+                <element signature="e#2929#2970#0" expanded="false" />
+                <element signature="e#2993#3066#0" expanded="false" />
+                <element signature="e#3088#3111#0" expanded="false" />
+                <element signature="e#3138#3182#0" expanded="false" />
+                <element signature="e#4224#4286#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GPT_READ_STD.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GPT_READ_STD.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-              <folding>
-                <element signature="e#409#445#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="34">
+              <caret line="2" column="52" lean-forward="false" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -60,6 +79,7 @@
       <find>FullOUTSF</find>
       <find>LANL</find>
       <find>group</find>
+      <find>time_steps</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -78,20 +98,22 @@
         <option value="$PROJECT_DIR$/subprocess_call.py" />
         <option value="$PROJECT_DIR$/generate_automesh_file.py" />
         <option value="$PROJECT_DIR$/Plot_FieldMap.py" />
-        <option value="$PROJECT_DIR$/generate_OUTSF7.py" />
         <option value="$PROJECT_DIR$/hkcm_database.py" />
-        <option value="$PROJECT_DIR$/psf_import.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/intro_text.txt" />
+        <option value="$PROJECT_DIR$/pristinifier.py" />
+        <option value="$PROJECT_DIR$/generate_OUTSF7.py" />
+        <option value="$PROJECT_DIR$/psf_import.py" />
+        <option value="$PROJECT_DIR$/GPT_INTERFACE.py" />
         <option value="$PROJECT_DIR$/AnalyticModel.py" />
         <option value="$PROJECT_DIR$/GPT_READ_STD.py" />
-        <option value="$PROJECT_DIR$/GPT_INTERFACE.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="width" value="974" />
+    <option name="x" value="86" />
+    <option name="y" value="44" />
+    <option name="width" value="1467" />
     <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -365,8 +387,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.GPT_INTERFACE" />
-        <item index="1" class="java.lang.String" itemvalue="Python.GPT_READ_STD" />
+        <item index="0" class="java.lang.String" itemvalue="Python.GPT_READ_STD" />
+        <item index="1" class="java.lang.String" itemvalue="Python.GPT_INTERFACE" />
         <item index="2" class="java.lang.String" itemvalue="Python.AnalyticModel" />
         <item index="3" class="java.lang.String" itemvalue="Python.test" />
         <item index="4" class="java.lang.String" itemvalue="Python.Plot_FieldMap" />
@@ -401,22 +423,29 @@
       <option name="project" value="LOCAL" />
       <updated>1521564745240</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="STD file loading OK">
+      <created>1521627163740</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1521627163740</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1057" extended-state="0" />
-    <editor active="false" />
+    <frame x="86" y="44" width="1467" height="1057" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18475991" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12386284" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33262935" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33225107" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26623377" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2407603" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -433,7 +462,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Loading GPT data into dataframe" />
     <MESSAGE value="Added header to ease data analysis" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added header to ease data analysis" />
+    <MESSAGE value="STD file loading OK" />
+    <option name="LAST_COMMIT_MESSAGE" value="STD file loading OK" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -442,7 +472,7 @@
           <properties exception="BaseException" />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="7" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -452,11 +482,11 @@
         <state relative-caret-position="136">
           <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
           <folding>
-            <element signature="e#1790#1821#0" expanded="false" />
-            <element signature="e#1844#1911#0" expanded="false" />
-            <element signature="e#1933#1954#0" expanded="false" />
-            <element signature="e#1981#2019#0" expanded="false" />
-            <element signature="e#2783#3028#0" expanded="false" />
+            <element signature="e#2299#2330#0" expanded="false" />
+            <element signature="e#2353#2420#0" expanded="false" />
+            <element signature="e#2442#2463#0" expanded="false" />
+            <element signature="e#2490#2528#0" expanded="false" />
+            <element signature="e#3292#3537#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -466,11 +496,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2575#2616#0" expanded="false" />
-            <element signature="e#2639#2712#0" expanded="false" />
-            <element signature="e#2734#2757#0" expanded="false" />
-            <element signature="e#2784#2828#0" expanded="false" />
-            <element signature="e#3870#3932#0" expanded="false" />
+            <element signature="e#2929#2970#0" expanded="false" />
+            <element signature="e#2993#3066#0" expanded="false" />
+            <element signature="e#3088#3111#0" expanded="false" />
+            <element signature="e#3138#3182#0" expanded="false" />
+            <element signature="e#4224#4286#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -480,7 +510,7 @@
         <state relative-caret-position="1156">
           <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="70" selection-end-column="53" />
           <folding>
-            <element signature="e#0#9#0" expanded="false" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -509,13 +539,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generate_automesh_file.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="36" column="34" lean-forward="false" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hkcm_magnets.dat">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -527,14 +550,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/psf_import.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-76">
-          <caret line="6" column="13" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -564,48 +579,94 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AnalyticModel.py">
+    <entry file="file://G:/Données/Miroir Déformable/octo-cobra/DM Analysis/FocSpotScript.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="33" column="13" lean-forward="true" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        <state relative-caret-position="9">
+          <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generate_automesh_file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="36" column="34" lean-forward="false" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
           <folding>
-            <element signature="e#273#309#0" expanded="false" />
-            <element signature="e#1790#1821#0" expanded="false" />
-            <element signature="e#1844#1911#0" expanded="false" />
-            <element signature="e#1933#1954#0" expanded="false" />
-            <element signature="e#1981#2019#0" expanded="false" />
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#92#145#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GPT_INTERFACE.py">
+    <entry file="file://G:/Données/Miroir Déformable/octo-cobra/DM Analysis/Temporal_Reconstructed.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="276" column="15" lean-forward="true" selection-start-line="276" selection-start-column="15" selection-end-line="276" selection-end-column="15" />
+        <state relative-caret-position="-289">
+          <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
           <folding>
-            <element signature="e#2575#2616#0" expanded="false" />
-            <element signature="e#2639#2712#0" expanded="false" />
-            <element signature="e#2734#2757#0" expanded="false" />
-            <element signature="e#2784#2828#0" expanded="false" />
-            <element signature="e#3870#3932#0" expanded="false" />
+            <element signature="e#24#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/generate_OUTSF7.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="76" column="10" lean-forward="true" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
+        <state relative-caret-position="374">
+          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/psf_import.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AnalyticModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="67" lean-forward="true" selection-start-line="2" selection-start-column="67" selection-end-line="2" selection-end-column="67" />
+          <folding>
+            <element signature="e#2299#2330#0" expanded="false" />
+            <element signature="e#2353#2420#0" expanded="false" />
+            <element signature="e#2442#2463#0" expanded="false" />
+            <element signature="e#2490#2528#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pristinifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="42" column="13" lean-forward="true" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GPT_READ_STD.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="34">
+          <caret line="2" column="52" lean-forward="false" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GPT_INTERFACE.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-170">
+          <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding>
-            <element signature="e#409#445#0" expanded="true" />
+            <element signature="e#2929#2970#0" expanded="false" />
+            <element signature="e#2993#3066#0" expanded="false" />
+            <element signature="e#3088#3111#0" expanded="false" />
+            <element signature="e#3138#3182#0" expanded="false" />
+            <element signature="e#4224#4286#0" expanded="false" />
           </folding>
         </state>
       </provider>

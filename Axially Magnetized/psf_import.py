@@ -2,6 +2,7 @@ import numpy as np
 
 
 def BImport(partnum):
+    partnum = '\\' + partnum
     w_dir = "G:\Programmes\LANL\Solenoids" + partnum
     w_file = "\OUTSF7.TXT"
     data = []

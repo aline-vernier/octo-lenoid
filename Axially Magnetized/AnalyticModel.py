@@ -12,6 +12,13 @@ from scipy.constants import m_e as mo
 from scipy.constants import c
 from scipy.interpolate import UnivariateSpline as UnivariateSpline
 from generate_OUTSF7 import FullOUTSF
+import pandas as pd
+
+###################################################################
+#                      PARTNUM                                    #
+###################################################################
+
+partNum = "9963-65252"
 
 ###################################################################
 #                PROGRAMME CONFIG                                 #
@@ -20,12 +27,12 @@ from generate_OUTSF7 import FullOUTSF
 psf_map = 1
 map_exists = 0
 plot_field = 0
+params_from_database = 1
+magnet_file = "G:\Programmes\LANL\Solenoids\hkcm_magnets.xlsx"
 
 ###################################################################
 #                MAGNET PARAMS FOR FIELD MAP GENERATION           #
 ###################################################################
-
-partNum = "\9963-65252"
 
 # outer diameter in m
 D = 20e-3
@@ -37,13 +44,17 @@ h = 30.0e-3
 BR = 1.17
 
 ###################################################################
-#                SETUP PARAMS FOR ANALYTIC EVAL                   #
+#                MAGNET PARAMETERS IN METERS                      #
 ###################################################################
-
-# Magnet parameters in meters
-Ri = 4.5e-3
-Ro = 23.5e-3
-L  = 6e-3
+if params_from_database:
+    df = pd.read_excel(magnet_file, index_col=0)
+    [h, d, D] = [df.loc[partNum, 'h']*1e-3,
+                   df.loc[partNum, 'd']*1e-3,
+                   df.loc[partNum, 'D']*1e-3]
+else:
+    Ri = 4.5e-3
+    Ro = 23.5e-3
+    L  = 6e-3
 
 ###################################################################
 #                ELECTRON PARAMS                                  #

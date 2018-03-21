@@ -5,6 +5,7 @@
 #     SCAN OVER ENERGY AND DISTANCE OF SOLENOID TO SOURCE         #
 #     NOT YET DEBUGGED FOR SINGLE RUN                             #
 #                                                                 #
+#     EXPLORATION MODE ALLOWS WIDE SCAN OF LMAP                   #
 ###################################################################
 
 from matplotlib import pyplot as plt
@@ -18,6 +19,12 @@ from scipy.interpolate import UnivariateSpline as UnivariateSpline
 import os
 import pandas
 import subprocess
+
+###################################################################
+#                      PARTNUM                                    #
+###################################################################
+
+partNum = "9963-65252"
 
 ###################################################################
 #                PROGRAMME CONFIG                                 #
@@ -52,15 +59,16 @@ else:
 # Data grouping if multirun
 group_by_time = 1
 
+# Focal length exploration mode : set to 1 if wide scan is required
+explore = 0
+
 ###################################################################
 #                MAGNET PARAMS FOR FIELD MAP GENERATION           #
 ###################################################################
 
 magnet_file = "G:\Programmes\LANL\Solenoids\hkcm_magnets.xlsx"
-partNum = "9963-65252"
 df = pandas.read_excel(magnet_file, index_col=0)
 h = df.loc[partNum, 'h']
-
 w_dir = GPT_ROOT + SOL_TYPE + "\\" + partNum
 
 ###################################################################
@@ -156,6 +164,11 @@ with open(focLength_file, 'w') as out:
     out.write(text)
 
 ###################################################################
+#               GENERATE Lmap array manually if required          #
+###################################################################
+if explore == 0:
+    l_map_array = np.linspace(min(l_map_array), min(l_map_array) + 0.08, 10)
+###################################################################
 #               GENERATE GPT INPUT FILE                           #
 #          SCAN PARAMS = E_Scan and L_map optional                #
 ###################################################################
@@ -195,7 +208,7 @@ text = \
     + "# Positions of various elements:  iris + the solenoid + detectors\n" \
     + "# Lmap = Scanned over \n" \
     + "# Liris = Scanned over \n" \
-    + "Ldet = 0.3;\n" \
+    + "Ldet = 0.5;\n" \
     + "Rpinhole = 1000e-6;	# diameter of entrance pinhole \n\n" \
     + "rmax(\"wcs\",\"z\"," + Lmap + ",Rpinhole,0.5e-3);		# thickness of lead sheet\n" \
     + "map2D_B(\"wcs\",\"z\"," + Lmap + ",\"" + w_dir + "\\fieldmap.gdf\",\"R\",\"Z\",\"Br\",\"Bz\",1.0);\n\n" \

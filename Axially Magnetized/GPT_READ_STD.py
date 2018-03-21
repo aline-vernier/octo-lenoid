@@ -5,22 +5,23 @@
 #                                                                 #
 ###################################################################
 
+
 from matplotlib import pyplot as plt
-import math as m
 import numpy as np
+import pristinifier as ps
 import pandas as pd
-from scipy.constants import elementary_charge as ee
-from scipy.constants import m_e as mo
-from scipy.constants import c
-from scipy.interpolate import UnivariateSpline as UnivariateSpline
-import re
+
+###################################################################
+#                      PARTNUM                                    #
+###################################################################
+
+partNum = "9963-65252"
 
 ###################################################################
 #                IMPORT FILE GENERATED FROM GDFA                  #
 ###################################################################
 
-partNum = "\9963-65252"
-w_dir = "G:\GPT\Salle_Noire\Axially_Magnetized_Solenoid" + partNum
+w_dir = "G:\GPT\Salle_Noire\Axially_Magnetized_Solenoid" + "\\" + partNum
 w_file = "\\std_SalleNoire_beam_h.txt"
 
 file_data = []
@@ -48,12 +49,45 @@ if multirun:
     idx_2_max = n_t_steps + 3
     labels = file_data[1]
     for idx_1 in range(len(file_data) % (n_t_steps + 3)):
-        l_map_vals.append(float(file_data[idx_1*(idx_2_max + 1)][1]))
+        data_temp = []
+        l_map_vals.append(
+            file_data[idx_1 * (idx_2_max + 1)][0] + ' = '
+        + str(1e2*float(file_data[idx_1*(idx_2_max + 1)][1])) + ' cm')
         for idx_2 in range(2, idx_2_max):
             this_element = map(float,
                                file_data[idx_1*(idx_2_max + 1) + idx_2])
             data_temp.append(this_element)
-            data.append(data_temp)
+        data.append(data_temp)
 
 data = np.array(data)
-print labels
+###################################################################
+#                LOAD MAGNET DATA                                 #
+###################################################################
+
+magnet_file = "G:\Programmes\LANL\Solenoids\hkcm_magnets.xlsx"
+df = pd.read_excel(magnet_file, index_col=0)
+[h, d, D] = [df.loc[partNum, 'h'],
+             df.loc[partNum, 'd'],
+             df.loc[partNum, 'D']]
+###################################################################
+#                PLOT DATA FROM FILE                              #
+###################################################################
+
+params = ps.plot_params()
+plt.rcParams.update(params)
+
+[tableau20, tableau20Edge] = ps.rgb_array()
+
+# stdx vs avgz
+for idx in range(len(l_map_vals)):
+    stdx = np.transpose(data[idx])[1]
+    avgz = np.transpose(data[idx])[4]
+    plt.plot(avgz, stdx, color=tableau20[idx], marker='o', markeredgecolor=tableau20Edge[idx])
+plt.legend(l_map_vals, loc='upper left')
+plt.title('magnet \# {0}, h = {1} mm, d = {2} mm, D = {3} mm'.format(partNum, h, d, D), fontsize = 15)
+
+plt.savefig(w_dir+'\\Lmap_stdx_vs_avgz.pdf', bbox_inches='tight')
+plt.show()
+
+
+

@@ -3,7 +3,7 @@ import subprocess
 
 
 def FullOUTSF(_D, _d, _h, _BR, _partNum ):
-
+    _partNum = "\\" + _partNum
     intro_text = ""
     with open('intro_text.txt') as input_file:
         for line in input_file:
