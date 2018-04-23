@@ -2,31 +2,21 @@ import os
 import subprocess
 
 
-def FullOUTSF(_D, _d, _h, _BR, _partNum ):
-    _partNum = "\\" + _partNum
+def FullOUTSF(_D, _d, _h, _BR, _partNum, _w_dir, _e_val):
+
     intro_text = ""
     with open('intro_text.txt') as input_file:
         for line in input_file:
             intro_text += line
 
-
 ###################################################################
 #                MAGNET PARAMS IN CM                              #
 ###################################################################
-
-#    D = 4
-#    d = 1.5
-#    h = 3.0
-#    BR = 12800
 
     D = 100*_D
     d = 100*_d
     h = 100*_h
     BR = 1e4*_BR
-
-    print D
-    print d
-    print h
 
 ###################################################################
 #                BOUNDARIES OF MAGNET IN PSF                      #
@@ -50,15 +40,15 @@ def FullOUTSF(_D, _d, _h, _BR, _partNum ):
 ###################################################################
 
     text = intro_text + magnet
-    partNum = _partNum
-    w_dir = "G:\Programmes\LANL\Solenoids" + partNum
-    w_name = "\AxiallyMagnetizedSolenoid"
 
-    am_file = w_dir + w_name + ".am"
-    t35_file = w_dir + w_name + ".t35"
+    _w_dir = '{0}\\{1}MeV\\{2}\\'.format(_w_dir, _e_val, _partNum)
+    _w_name = _partNum
 
-    if not os.path.exists(w_dir):
-        os.makedirs(w_dir)
+    am_file = _w_dir + _w_name + ".am"
+    t35_file = _w_dir + _w_name + ".t35"
+
+    if not os.path.exists(_w_dir):
+        os.makedirs(_w_dir)
 
     with open(am_file, 'w') as out:
         out.write(text)
@@ -74,4 +64,4 @@ def FullOUTSF(_D, _d, _h, _BR, _partNum ):
     subprocess.call(
         ['G:\Programmes\LANL\SF7.EXE', t35_file])
 
-    return
+    return _w_dir + 'OUTSF7.TXT'

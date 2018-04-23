@@ -32,13 +32,13 @@ def plot_params():
     inches_per_pt = 1.0 / 72.27  # Convert pt to inches
     golden_mean = (np.sqrt(5) - 1.0) / 2.0  # Aesthetic ratio
     fig_width = fig_width_pt * inches_per_pt  # width in inches
-    fig_height = 0.5*fig_width * 1  # height in inches
+    fig_height = 1*fig_width * 1  # height in inches
     fig_size = [fig_width, fig_height]
 
     params = {'font.size' : 20,
               'font.family' : 'Helvetica',
               'font.monospace' : 'Computer Modern',
-              'axes.labelsize' : 20,
+              'axes.labelsize' : 15,
               'backend' : 'ps',
               'legend.fontsize': 10,
               'xtick.labelsize' : 16,

@@ -1,9 +1,9 @@
 import numpy as np
 
 
-def BImport(partnum):
-    partnum = '\\' + partnum
-    w_dir = "G:\Programmes\LANL\Solenoids" + partnum
+def BImport(partnum, w_dir, e_val):
+
+    w_dir = '{0}\\{1}MeV\\{2}'.format(w_dir, e_val, partnum)
     w_file = "\OUTSF7.TXT"
     data = []
 
@@ -33,6 +33,7 @@ def BImport(partnum):
     _Br = 1e-4*data[2]
     _Bz = 1e-4*data[3]
     _B = 1e-4*data[4]
+
 
     r0 = np.where(min(abs(_r)) == abs(_r))[0]
     B0 = np.array([abs(_Bz[element]) for element in r0])
