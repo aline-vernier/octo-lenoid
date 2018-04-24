@@ -41,7 +41,6 @@ def read_std(GPT_HEAD_FILE, w_dir, partNum, energy, bmap_offset):
         for line in my_file:
             file_data.append(line.split())
 
-    # print file_data[0:7]
 
     multirun = bool(file_data[0][1])
     energy_scan = bool(file_data[1][1])
@@ -54,8 +53,7 @@ def read_std(GPT_HEAD_FILE, w_dir, partNum, energy, bmap_offset):
     Lmap = file_data[8][1]
     Lpinhole = float(file_data[9][3])
 
-
-    file_data = file_data[11::]
+    file_data = file_data[10:-1]
     data = []
     data_temp = []
     l_map_vals = []
@@ -64,30 +62,29 @@ def read_std(GPT_HEAD_FILE, w_dir, partNum, energy, bmap_offset):
     pos_mag_vals = []
     l_pinhole_vals = []
     labels = []
-
+    if file_data[n_t_steps+3] != []:
+        n_t_steps += 1
     if multirun:
         idx_2_max = n_t_steps + 3
-        labels = file_data[1]
-
-
-        for idx_1 in range(len(file_data) % (n_t_steps + 3)):
+        for idx_1 in range(len(file_data) / (n_t_steps + 3)):
+            print "this is " + str(file_data[idx_1*idx_2_max + 1])
             data_temp = []
             l_map_vals.append(
-                file_data[idx_1 * (idx_2_max + 1)][0] + ' = '
-                + str(float(file_data[idx_1*(idx_2_max + 1)][1])) + ' cm')
+                file_data[idx_1*idx_2_max + 1 + idx_1][0] + ' = '
+                + str(float(file_data[idx_1*idx_2_max + 1][1])) + ' cm')
 
-            l_map_vals_float.append(float(file_data[idx_1*(idx_2_max + 1)][1]))
-            Lmapval  = float(file_data[idx_1*(idx_2_max + 1)][1])
-            Lmagnet_t = Lmapval*1e3 + 60 -h/2.
+            l_map_vals_float.append(float(file_data[idx_1*idx_2_max + 1][1]))
+            Lmapval  = float(file_data[idx_1*idx_2_max + 1][1])
+            Lmagnet_t = Lmapval*1e3 + 60 - h/2.
 
             pos_mag_vals.append(
                 'magpos = '
                 + str(1e-1*Lmagnet_t) + ' cm')
 
             print 'Lmap = {2}, Lmagnet = {1}, Lpinhole = {0}'.format(Lpinhole*1e3 + Lmapval*1e3, Lmapval*1e3 + 60 -h/2., Lmapval*1e3)
-            for idx_2 in range(2, idx_2_max):
+            for idx_2 in range(4, idx_2_max):
                 this_element = map(float,
-                                   file_data[idx_1*(idx_2_max + 1) + idx_2])
+                                   file_data[idx_1*idx_2_max + idx_2])
                 data_temp.append(this_element)
 
             data.append(data_temp)
@@ -115,7 +112,7 @@ def read_std(GPT_HEAD_FILE, w_dir, partNum, energy, bmap_offset):
 
         tidx = idx%len(tableau20)
         ax[0].plot(avgz, stdx, color=tableau20[idx], marker='o', markeredgecolor=tableau20Edge[idx])
-        ax[0].legend(pos_mag_vals, loc='upper left')
+        ax[0].legend(pos_mag_vals, loc='upper right')
         ax[1].plot(avgz, nemirrms, color=tableau20[idx], marker='o', markeredgecolor=tableau20Edge[idx])
         ax[2].semilogy(avgz, charge, color=tableau20[idx], marker='o', markeredgecolor=tableau20Edge[idx])
 

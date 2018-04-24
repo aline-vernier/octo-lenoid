@@ -51,7 +51,7 @@ def gpt_run(MAGNET_FILE, OUTSF7_LOC, psf_w_dir, partNum, bmap_offset, GPT_ROOT, 
 
     # Screen or snapshot
     snapshot = 1
-    time_steps = 100
+    time_steps = 202
     if snapshot == 1:
         screen_or_snapshot = "snapshot(0,Tdet,Tstep) ;\n"
     else:
