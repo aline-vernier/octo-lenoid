@@ -20,7 +20,7 @@ MAGNET_FILE = "G:\Programmes\LANL\Solenoids\hkcm_magnets.xlsx"
 
 partNumLoop = False
 params_from_database = True
-genField_and_GPT = False
+genField_and_GPT = True
 
 df = pd.read_excel(MAGNET_FILE, index_col=0)
 

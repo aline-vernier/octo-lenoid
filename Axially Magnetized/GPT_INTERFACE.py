@@ -70,6 +70,7 @@ def gpt_run(MAGNET_FILE, OUTSF7_LOC, psf_w_dir, partNum, bmap_offset, GPT_ROOT, 
     magnet_file = MAGNET_FILE
     df = pandas.read_excel(magnet_file, index_col=0)
     [h, rSol] = [df.loc[partNum, 'h'], df.loc[partNum, 'D']/2]
+    print "rSol = " + str(rSol)
 
     ###################################################################
     #                ELECTRON BEAM PARAMS                             #
@@ -168,7 +169,7 @@ def gpt_run(MAGNET_FILE, OUTSF7_LOC, psf_w_dir, partNum, bmap_offset, GPT_ROOT, 
     ###################################################################
     if explore == 0:
         # l_map_array = np.linspace(max(l_map_array), min(l_map_array) + 0.08, 10)
-        l_map_array = np.linspace(0.0395, 0.04, 5)
+        l_map_array = np.linspace(0.02, 0.08, 10)
     ###################################################################
     #               GENERATE GPT INPUT FILE                           #
     #          SCAN PARAMS = E_Scan and L_map optional                #
@@ -214,8 +215,8 @@ def gpt_run(MAGNET_FILE, OUTSF7_LOC, psf_w_dir, partNum, bmap_offset, GPT_ROOT, 
         + "# Liris = Scanned over \n" \
         + "Ldet = 0.5;\n" \
         + "Rpinhole = 1000e-6;	# diameter of entrance pinhole \n\n" \
-        + "rmax(\"wcs\",\"z\"," + Lpinhole + ",Rpinhole, 0.5e-3);		# thickness of lead sheet\n" \
-        + "rmax(\"wcs\",\"z\"," + str(zero) + ", " + str(rSol*1e-3) + ");		# thickness of lead sheet\n" \
+        + "rmax(\"wcs\",\"z\"," + Lpinhole + ", Rpinhole, 0.5e-3);		# thickness of lead sheet\n" \
+        + "rmax(\"wcs\",\"z\", " + Lpinhole  + ", 5e-3, 40e-3);		# remove particles with r>2.5mm \n" \
         + "map2D_B(\"wcs\",\"z\"," + Lmap + ",\"" + w_dir + "\\fieldmap.gdf\",\"R\",\"Z\",\"Br\",\"Bz\",1.0);\n\n" \
         + "# Specify output times \n" \
         + "dtmax=1e-3/vz;\n" \
@@ -233,7 +234,10 @@ def gpt_run(MAGNET_FILE, OUTSF7_LOC, psf_w_dir, partNum, bmap_offset, GPT_ROOT, 
     ###################################################################
     if multi_run == 1:
         l_map_min = min(l_map_array)
-        l_map_max = 2*max(l_map_array)
+        if explore == 0 :
+            l_map_max = max(l_map_array)
+        else:
+            l_map_max = 2*max(l_map_array)
         l_map_steps = (l_map_max - l_map_min) / float(num_l_map)
         e_energy_step = (e_energy_stop - e_energy_start) / float(num_e_steps)
 

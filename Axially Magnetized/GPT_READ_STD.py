@@ -67,7 +67,7 @@ def read_std(GPT_HEAD_FILE, w_dir, partNum, energy, bmap_offset):
     if multirun:
         idx_2_max = n_t_steps + 3
         for idx_1 in range(len(file_data) / (n_t_steps + 3)):
-            print "this is " + str(file_data[idx_1*idx_2_max + 1])
+
             data_temp = []
             l_map_vals.append(
                 file_data[idx_1*idx_2_max + 1 + idx_1][0] + ' = '
@@ -124,27 +124,14 @@ def read_std(GPT_HEAD_FILE, w_dir, partNum, energy, bmap_offset):
         ax[0].add_line(line)
         ax[0].add_line(line2)
 
+#    ax[0].set_ylim(0, 2.5)
     ax[1].set_ylim(0, 5)
 
     ax[2].set_xlabel('z (m)')
 
     ax[0].set_ylabel('stdx (mm)')
     ax[1].set_ylabel('emittance (mm.mrad)')
-    ax[2].set_ylabel('numpart')
+    ax[2].set_ylabel('num particles')
 
     fig.show()
-    fig.savefig(w_dir + '\\Lmap_stdx_and_nemirstd_vs_avgz.pdf', bbox_inches='tight')
-
-
-        #     plt.plot(avgz, stdx, color=tableau20[idx], marker='o', markeredgecolor=tableau20Edge[idx])
-    # plt.legend(l_map_vals, loc='upper left')
-    # plt.title('magnet \# {0}, h = {1} mm, d = {2} mm, D = {3} mm; energy = {4} keV'
-    #           .format(partNum, h, d, D, energy), fontsize = 15)
-    #
-    # plt.savefig(w_dir+'\\Lmap_stdx_vs_avgz.pdf', bbox_inches='tight')
-    # plt.show()
-
-
-
-
-
+    fig.savefig(w_dir + '\\Lmap_stdx_and_nemirstd_vs_avgz.jpg', bbox_inches='tight')
