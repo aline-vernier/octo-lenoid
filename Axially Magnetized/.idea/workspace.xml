@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6ed394e4-cb14-4665-8dd2-f5c7e3c3db9c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GPT_INTERFACE.py" afterPath="$PROJECT_DIR$/GPT_INTERFACE.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GPT_READ_STD.py" afterPath="$PROJECT_DIR$/GPT_READ_STD.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MAIN_PSF_GPT_ANALYSIS.py" afterPath="$PROJECT_DIR$/MAIN_PSF_GPT_ANALYSIS.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -491,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524563533534</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Final version, includes no space charge effects yet.">
+      <created>1524833720951</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1524833720951</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -555,7 +559,8 @@
     <MESSAGE value="Fully working version, though not as general as it could be : &#10;- Only multiple runs are debugged in GPT Interface&#10;- Only multiple runs are supported in STD READ&#10;&#10;Future Improvements &#10;- PartNum needs to be passed automatically through AnalyticModel.py &gt; GPT_INTERFACE  &gt; GPT_READ_STD&#10;- Electron energy needs to be passed to GPT_STD_READ.py though header" />
     <MESSAGE value="Polished graphs, consistency checks nearly finished. &#10;Can now plot emittance, stdx, remaining charge as well as magnet limits." />
     <MESSAGE value="Fixed bug due to varying n_time_steps (depending on whether Tmax%dt = 0 or not in GPT interface)&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug due to varying n_time_steps (depending on whether Tmax%dt = 0 or not in GPT interface)&#10;" />
+    <MESSAGE value="Final version, includes no space charge effects yet." />
+    <option name="LAST_COMMIT_MESSAGE" value="Final version, includes no space charge effects yet." />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
