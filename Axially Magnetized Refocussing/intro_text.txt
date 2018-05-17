@@ -1,0 +1,19 @@
+Axially Magnetized Solenoid
+
+
+&reg kprob=0,             ! Poisson or Pandira problem
+icylin=1,                 ! Cylindrical symmetry
+IPERM=1,
+mode=0,                   ! Some materials have variable permeability
+dx=0.05,dy=0.05,          ! Mesh intervals
+nbslo=0,                  ! Dirichlet boundary condition on lower edge
+ktop=50, lmin=1, ltop=49 &   ! Logical bounds for field interpolation
+
+
+&po x=0,y=-6.00 &
+&po x=5.0,y=-6.00 &
+&po x=5.00,y=6.00 &
+&po x=0.0,y=6.00 &
+&po x=0.0,y=-6.00 &
+
+
